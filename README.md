@@ -27,7 +27,7 @@ Every change to a patient record is tracked with the doctor's identity, old valu
 
 ### 1. Clone the repository
 ```bash
-git clone <repo-url>
+git clone https://github.com/Yashaswini-Ashwath/Patient-Management-system.git
 cd NodeJS
 ```
 
