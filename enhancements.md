@@ -38,8 +38,6 @@ A list of improvements that can be made to the Patient Management System, rangin
 - Create a `ProtectedRoute` wrapper component that checks for a valid auth state before rendering the child route.
 - If unauthenticated, redirect immediately to `/login` using `useNavigate` or React Router's `<Navigate>` component.
 
-```
-
 ---
 
 ## 4. Input Validation in the UI
@@ -50,6 +48,13 @@ A list of improvements that can be made to the Patient Management System, rangin
 
 **Improvement:**
 - Validate all form fields on the frontend before allowing submission:
+  - Required fields (name, age, contact) must not be empty.
+  - Age must be a positive number within a realistic range (e.g., 0–150).
+  - Contact number must match a valid format.
+  - Password field in the digital signature modal must not be empty.
+- Show inline error messages directly beneath the relevant field rather than a generic alert.
+- Disable the submit button until the form is in a valid state.
+- Libraries like **React Hook Form** with **Zod** can handle this cleanly without manual `useState` for each error.
 
 ---
 
